@@ -51,4 +51,15 @@ public class TemaInputField {
         Assert.assertEquals(10,10);
 
     }
+
+    @Test ( priority = 4)
+    public void multiple3(){
+        driver.get("https://www.lambdatest.com/selenium-playground/simple-form-demo");
+        driver.findElement(By.id("sum1")).sendKeys("a");
+        driver.findElement(By.id("sum2")).sendKeys("5");
+        driver.findElement(By.xpath("//*[@id=\"gettotal\"]/button")).click();
+        WebElement yourMessage = driver.findElement(By.id("addmessage"));
+        Assert.assertEquals("NaN", "NaN");
+
+    }
 }
